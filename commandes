@@ -1,0 +1,40 @@
+React:
+rsc: squelette fonction
+uef: useEffect
+usf: useState
+
+Symfony commandes utiles:
+
+
+php -S localhost:8000 -t public  
+symfony serve
+npm run dev-server
+
+composer create-project symfony/website-skeleton:"^5.4" my_project_name
+
+# Start server
+php bin/console server:run
+
+# Install dependencies
+php composer.phar update
+php composer update
+
+
+# Create/update entity
+php bin/console make:entity
+php bin/console generate:doctrine:entity
+
+
+# Update database
+php bin/console make:migration 
+php bin/console doctrine:schema:update --force (symfony 3)
+
+
+php bin/console doctrine:migrations:migrate
+php bin/console doctrine:schema:update --dump-sql (montre la commande SQL)
+
+
+
+# Install plugins assets 
+php bin/console asset:install
+php bin/console asset:install --symlink (easyadmin)
